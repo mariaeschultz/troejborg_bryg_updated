@@ -1,0 +1,3 @@
+user-agent: *
+allow: /
+Sitemap: http://troejborg-bryg.mariaelkjaerschultz.dk/sitemap.xml

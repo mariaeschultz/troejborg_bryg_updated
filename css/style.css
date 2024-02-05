@@ -1,0 +1,433 @@
+/* My root variables */
+
+:root {
+  --offwhite: #f4ebdd;
+  --sienna: #a0522d;
+  --brass: #c49e5b;
+  --chestnut: #954535;
+  --auburn: #a52a2a;
+  --taupe: #483c32;
+  --buff: #daa06d;
+  --pine: #304838;
+  --brown: #49331e;
+}
+
+/* Global reset */
+
+* {
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+/* Styling header - nav bar */
+
+
+.container {
+  width: 80%;
+  margin: 0 auto; 
+}
+
+header {
+  background-color: var(--offwhite);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+  border-bottom: 2px solid var(--sienna);
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  display: flex;
+  justify-content: space-evenly;
+  width: 240px;
+  height: 175px;
+  padding: 10px 0;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 18px 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 50px;
+  position: relative;
+}
+
+nav a {
+  color: var(--sienna);
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 800;
+  display: block;
+}
+
+nav a:hover {
+  color: var(--sienna);
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 3px;
+  background-color: var(--sienna);
+  position: absolute;
+  bottom: -10px;
+  width: 0;
+  transition: all ease-in-out 185ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+
+/* Styling of the body */
+
+
+body {
+	font-family: 'brother-1816', sans-serif;
+  line-height: 1.5;
+  background-color: var(--chestnut);
+}
+
+h1 {
+  font-size: 40px;
+  color: var(--chestnut);
+}
+
+/* Vælger alle ul og sætter deres list-style til none */
+
+ul {
+	list-style: none;
+}
+
+
+/* Styling of the "Hjem" page (front page) */
+
+
+.hjem-tekst-h1 {
+  font-weight: 140;
+  font-size: 60px;
+  color: var(--offwhite);
+  text-align: center;
+  padding-top: 3%;
+  padding-bottom: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.hjem-tekst-h2 {
+  font-size: 30px;
+  color: var(--offwhite);
+  text-align: center;
+  padding-top: 3%;
+  padding-bottom: 12%;
+  padding-left: 9%;
+  padding-right: 9%;
+  line-height: 1.7;
+}
+
+.viking-illustration {
+  height: 550px;
+  width: 550px;
+  align-content: center;
+  margin: 0 auto;
+  display: block;
+}
+
+
+/* Styling of the "Vores Øl" page */
+
+
+.products-header {
+  text-align: center;
+  margin-top: 6%;
+  margin-bottom: 1%;
+  padding: 20px;
+}
+
+.vores-ol-sektion {
+ display: grid; 
+  grid-template-columns: 0.33fr 0.33fr 0.33fr; 
+  grid-template-rows: 0.3fr; 
+  gap: 2rem;
+  margin: 1.25rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.container-products {
+  background-color: var(--offwhite);
+}
+
+.products {
+  display: flex;  
+  
+ 
+}
+.container-products h2{
+  margin-left: 3rem;
+}
+.products h2{
+  width: 100%;
+  margin-left: 5rem;
+}
+
+.produkt-tekst{
+  max-width: 100%;
+}
+
+.product-image img {
+  max-height: 20rem;
+  display: flex;
+ 
+}
+
+ 
+
+.product-keywords {
+  list-style-type: disc;
+  color: var(--blue-color);
+  margin-left: 20px;
+}
+
+
+/* Styling of the "Ansvarlighed" page */
+
+
+.ansvarlighed-tekst-h1 {
+  font-size: 25px;
+  color: var(--offwhite);
+  text-align: center;
+  padding-top: 3%;
+  padding-bottom: 0;
+  padding-left: 9%;
+  padding-right: 9%;
+  line-height: 1.7;
+}
+
+.ansvarlighed-tekst-h2 {
+  font-size: 25px;
+  color: var(--offwhite);
+  text-align: center;
+  padding-top: 4%;
+  padding-bottom: 12%;
+  padding-left: 9%;
+  padding-right: 9%;
+  line-height: 1.7;
+}
+
+
+/* Styling of the "Om Os" page */
+
+
+.container-om-os {
+  
+  color: var(--chestnut);
+  max-width: 80%;
+  margin: auto;
+}
+
+.historien-bag,
+.vores-haandvaerk,
+.vikinger-paa-flasken {
+  background-color: var(--offwhite);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px 0 1px 0;
+  font-size: 150%;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--taupe);
+}
+
+.historien-bag img,
+.vores-haandvaerk img,
+.vikinger-paa-flasken img {
+  margin-right: 20px;
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.historien-bag-tekst,
+.vores-haandvaerk-tekst,
+.vikinger-paa-flasken-tekst {
+  color: var(--offwhite);
+  border-radius: 5px;
+  padding: 50px;
+  margin: 20px 0 20px 0;
+  font-size: 120%;
+  line-height: 1.75;
+}
+
+.vikinger-paa-flasken-tekst {
+  padding-bottom: 12%;
+}
+
+
+/* Styling of the footer */
+
+
+
+.footer {
+	background-color: var(--offwhite);
+  padding: 65px 0;
+  position: relative;
+  border-top: 3px solid var(--sienna);
+  max-width: 100%;
+}
+
+footer .logo {
+  width: 230px;
+  height: auto;
+}
+
+.container {
+	max-width: 1170px;
+	margin: auto;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.footer-col {
+  margin-left: auto;
+}
+
+.footer-col h4 {
+	font-size: 18px;
+	color: var(--sienna);
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 800;
+	
+}
+
+.footer-col .contact ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+	font-size: 16px;
+	text-transform: capitalize;
+	color: var(--sienna);
+	text-decoration: none;
+	font-weight: 300;
+	color: var(--sienna);
+	display: block;
+	transition: all 0.3s ease;
+}
+
+.footer-col ul li .icon-mail,
+.footer-col ul li .icon-smartphone,
+.footer-col ul li .icon-direction {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.footer-col .social a {
+	display: inline-block;
+	height: 40px;
+	max-width: 40px;
+  font-size: 26px;
+	background-color: var(--offwhite);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: rgba(160, 82, 45, 0.9);
+}
+
+.footer-col, .social a:hover {
+	color: var(--chestnut);
+}
+
+
+/* Styling of the bottom of the footer */
+
+
+.footer p {
+  bottom: 20px;
+  margin: auto;
+  color: var(--sienna);
+}
+
+.footer a.alkoholbevilling,
+.footer a.kontrolrapport {
+  color: var(--sienna);
+  text-decoration: none;
+}
+
+
+
+
+/* Media query breakpoint for mobile */
+
+@media screen and (max-width: 768px) {
+  .container nav {
+    float: none;
+    text-align: center;
+  }
+
+  .container nav ul {
+    margin: 0;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container nav ul li {
+    display: block;
+    margin: 0;
+    padding: 10px 0;
+  }
+  .container .header-logo img {
+    width: 40%;
+    height: auto;
+  }
+
+  .footer .logo {
+    width: 100px;
+    height: auto;
+  }
+  .viking-illustration {
+    width: 100%;
+    height: auto;
+  }
+  .hjem-tekst-h1 {
+    font-size: 35px;
+  }
+  
+  .hjem-tekst-h2 {
+    font-size: 18px;
+  }
+
+  .vores-ol-sektion {
+    display: grid; 
+    grid-template-columns: 1fr; 
+
+  }
+}
